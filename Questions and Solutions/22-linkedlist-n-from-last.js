@@ -10,6 +10,7 @@
 //    list.insertLast('d');
 //    fromLast(list, 2).data // 'b'
 
+// SOLUTION 1:
 function fromLast(list, n) {
     let slow = list.head;
     let fast = list.head;

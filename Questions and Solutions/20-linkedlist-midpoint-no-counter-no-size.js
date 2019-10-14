@@ -14,6 +14,7 @@
 //   l.insertLast('c')
 //   midpoint(l); // returns { data: 'b' }
 
+// SOLUTION 1:
 function midpoint(list) {
     let slow = list.head;
     let fast = list.head;

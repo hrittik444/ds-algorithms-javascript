@@ -11,6 +11,7 @@
 //   c.next = b;
 //   circular(l) // true
 
+// SOLUTION 1:
 function circular(list) {
     let slow = list.head;
     let fast = list.head;

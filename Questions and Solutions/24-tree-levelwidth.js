@@ -10,6 +10,7 @@
 // 4       5
 // Answer: [1, 3, 2]
 
+// SOLUTION 1:
 function levelWidth(root) {
     const arr = [root, 'stopper'];
     let count = [0];

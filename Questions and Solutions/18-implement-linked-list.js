@@ -2,6 +2,7 @@
 // Implement classes Node and Linked Lists
 // See 'directions' document
 
+// SOLUTION 1:
 // NODE CLASS API:
 class Node {
     constructor(data, next = null) {

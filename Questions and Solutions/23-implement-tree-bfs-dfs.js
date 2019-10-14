@@ -9,6 +9,7 @@
 // on the tree class.  Each method should accept a
 // function that gets called with each element in the tree
 
+// SOLUTION 1:
 class Node {
     constructor(data=null) {
         this.data = data;
