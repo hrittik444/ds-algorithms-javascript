@@ -36,6 +36,11 @@ TIME/RUNTIME COMPLEXITY:
 	O(N^2): quadratic
 	...and so on
 
+-runtime complexity of common sorting algorithms:
+	-bubble sort: 	worst-case runtime = n^2
+	-selection sort: worst-case runtime = n^2
+	-merge sort: 	worst-case runtime = n*log(n)
+
 --------------------------------------------------------
 SPACE COMPLEXITY:
 

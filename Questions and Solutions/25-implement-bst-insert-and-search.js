@@ -10,7 +10,7 @@
 // class.  Contains should accept a 'data' argument
 // and return the Node in the tree with the same value.
 
-// SOLUTION 1(using recorsion):
+// SOLUTION 1(using recursion):
 class Node {
     constructor(data=null) {
         this.data = data;
