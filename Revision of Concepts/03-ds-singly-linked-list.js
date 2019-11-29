@@ -114,6 +114,7 @@ class SinglyLinkedList {
 		let newNode = new Node(val);
 		let prevNode = this.get(index-1);
 		let nextNode = prevNode.next;
+
 		prevNode.next = newNode;
 		newNode.next = nextNode;
 		this.length++;
@@ -127,6 +128,7 @@ class SinglyLinkedList {
 		if(index === 0) return this.shift();
 		let prevNode = this.get(index-1);
 		let removeNode = prevNode.next;
+
 		prevNode.next = removeNode.next;
 		this.length--;
 		return removeNode;
@@ -138,9 +140,9 @@ class SinglyLinkedList {
 		let node = this.head;
 		this.head = this.tail;
 		this.tail = node;
-
 		let nextNode;
 		let prevNode = null;
+
 		for(let i = 0; i < this.length; i++) {
 			// reversing pointers
 			nextNode = node.next;
