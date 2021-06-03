@@ -1,3 +1,3 @@
-# 🐶Data Structures and Algorithms in JavaScript
+# Data Structures and Algorithms Concepts in JavaScript
 
-### Some basic/intermediate Data Structures and Algorithms Questions and Solutions using JavaScript
+### Demonstration of Data Structures and Algorithms using JavaScript
