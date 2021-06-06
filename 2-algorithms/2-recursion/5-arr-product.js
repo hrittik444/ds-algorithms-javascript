@@ -10,4 +10,4 @@ function findProduct(arr) {
     return product;
 }
 
-findProduct([1, 2, 3, 4]);
+console.log(findProduct([1, 2, 3, 4]));

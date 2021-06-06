@@ -7,4 +7,4 @@ function power(num, exp) {
     return num * power(num, --exp);
 }
 
-power(2, 4);
+console.log(power(2, 4));

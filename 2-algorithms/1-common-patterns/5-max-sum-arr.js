@@ -21,7 +21,7 @@ function findMaxSum(arr, n) {
     return maxSum;
 }
 
-findMaxSum([1, 2, 5, 2, 8, 1, 5], 4);
+console.log(findMaxSum([1, 2, 5, 2, 8, 1, 5], 4));
 // 1 2 5 2
 //   2 5 2 8
 //     5 2 8 1

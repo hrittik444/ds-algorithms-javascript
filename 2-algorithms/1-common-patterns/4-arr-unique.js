@@ -17,4 +17,4 @@ function countUniqArr(arr) {
     return i;
 }
 
-countUniqArr([-2, -1, -1, 0, 1]);
+console.log(countUniqArr([-2, -1, -1, 0, 1]));

@@ -23,5 +23,4 @@ function anagrams(str1, str2) {
     return true;
 }
 
-anagrams('uhueplflo', 'fhuellouky');
-anagrams('cinema', 'iceman');
+console.log(anagrams('cinema', 'iceman'));

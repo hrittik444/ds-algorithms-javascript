@@ -18,4 +18,4 @@ function binary(arr, val) {
     return -1;
 }
 
-binary([1, 2, 3, 4, 5, 6], 4);
+console.log(binary([1, 2, 3, 4, 5, 6], 4));

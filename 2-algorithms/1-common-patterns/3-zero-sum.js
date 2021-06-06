@@ -21,5 +21,4 @@ function zeroSum(arr) {
     }
 }
 
-zeroSum([-3, -2, -1, 0, 1, 2, 3]);
-zeroSum([-2, 0, 1, 3]);
+console.log(zeroSum([-2, 0, 1, 3]));

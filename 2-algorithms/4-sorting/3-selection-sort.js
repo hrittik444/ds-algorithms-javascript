@@ -21,4 +21,4 @@ function selectionSort(arr) {
     return arr;
 }
 
-selectionSort([5, 3, 4, 1, 2, 0, 9, 3, 8, 2, 5, 3, 9, 6]);
+console.log(selectionSort([5, 3, 4, 1, 2, 0, 9, 3, 8, 2, 5, 3, 9, 6]));

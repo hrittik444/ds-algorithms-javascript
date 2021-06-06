@@ -36,4 +36,4 @@ let obj = {
     }
 }
 
-collectStrings(obj);
+console.log(collectStrings(obj));

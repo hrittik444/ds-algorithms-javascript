@@ -18,7 +18,7 @@ function collectOddValues(arr) {
     return result;
 }
 
-collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+console.log(collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 // Solution 2: pure recursion:
 function collectOddValues(arr) {
@@ -34,4 +34,4 @@ function collectOddValues(arr) {
     return newArr;
 }
 
-collectOddValues([1, 2, 3, 4, 5])
+console.log(collectOddValues([1, 2, 3, 4, 5]));

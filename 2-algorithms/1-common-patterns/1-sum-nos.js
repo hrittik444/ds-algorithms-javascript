@@ -5,4 +5,4 @@ function sum(n) {
     return n * (n + 1) / 2;
 }
 
-sum(100);
+console.log(sum(100));

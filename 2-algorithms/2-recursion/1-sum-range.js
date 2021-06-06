@@ -6,4 +6,4 @@ function sumRange(num) {
     return num + sumRange(--num);
 }
 
-sumRange(5);
+console.log(sumRange(5));

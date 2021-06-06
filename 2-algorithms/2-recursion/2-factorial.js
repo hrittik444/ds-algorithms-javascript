@@ -6,4 +6,4 @@ function factorial(num) {
     return num * factorial(--num);
 }
 
-factorial(2);
+console.log(factorial(2));

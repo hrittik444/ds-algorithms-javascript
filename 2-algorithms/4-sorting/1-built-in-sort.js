@@ -16,4 +16,4 @@ function basicSortStr(arr) {
     return arr.sort((str1, str2) => str1.length - str2.length);
 }
 
-basicSortStr(['asd', 'i', 'yhsdw', 'wwtsgggsfs', 'fsgs', 'pouud']);
+console.log(basicSortStr(['asd', 'i', 'yhsdw', 'wwtsgggsfs', 'fsgs', 'pouud']));
