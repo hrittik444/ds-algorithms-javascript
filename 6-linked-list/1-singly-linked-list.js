@@ -7,6 +7,11 @@
 // Randomly accessing an element in a Linked List is not allowed, like in Arrays.
 // Since not indexed, insertion and deletion is much faster than an Array.
 
+// Insertion: O(n)
+// Removing: O(n)
+// Searching: O(n)
+// Accessing: O(n)
+
 class Node {
     constructor(val) {
         this.val = val;
@@ -183,10 +188,8 @@ console.log(sll1);
 sll1.pop();
 sll1.pop();
 console.log(sll1);
-
 sll1.push(4);
 sll1.push(5);
-console.log(sll1);
 
 sll1.shift();
 sll1.shift();
@@ -197,6 +200,8 @@ sll1.unshift(1);
 console.log(sll1);
 
 console.log(sll1.get(3));
+console.log(sll1.get(0));
+console.log(sll1.get(sll1.length - 1));
 
 sll1.set('x', 2);
 console.log(sll1);
