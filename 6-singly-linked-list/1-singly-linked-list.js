@@ -115,6 +115,59 @@ class SinglyLinkedList {
         }
         return false;
     }
+
+    // insert: adding a new Node to a specific index in the Linked List
+    insert(val, index) {
+        if (index < 0 || index > this.length) return false;
+
+        if (index === 0) return !!this.unshift(val);
+        if (index === this.length) return !!this.push(val);
+
+        let newNode = new Node(val);
+        let prevNode = this.get(index - 1);
+        let nextNode = prevNode.next;
+
+        prevNode.next = newNode;
+        newNode.next = nextNode;
+        this.length += 1;
+        return true;
+    }
+
+    // remove: removing a Node from a specific index in the Linked List
+    remove(index) {
+        if (index < 0 || index >= this.length) return undefined;
+
+        if (index === 0) return !!this.shift();
+        if (index === this.length - 1) return !!this.pop();
+
+        let prevNode = this.get(index - 1);
+        let removeNode = prevNode.next;
+
+        prevNode.next = removeNode.next;
+        this.length -= 1;
+        return removeNode;
+    }
+
+    // reverse: reversing a Linked List in place
+    reverse() {
+        // reversing head and tail
+        let node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+
+        let nextNode;
+        let prevNode = null;
+
+        for (let i = 0; i < this.length; i += 1) {
+            // reversing pointers
+            nextNode = node.next;
+            node.next = prevNode;
+
+            // moving prevNode and node ahead
+            prevNode = node;
+            node = nextNode;
+        }
+    }
 }
 
 let sll1 = new SinglyLinkedList;
@@ -148,3 +201,16 @@ console.log(sll1.get(3));
 sll1.set('x', 2);
 console.log(sll1);
 sll1.set(3, 2);
+
+sll1.insert(2.5, 2);
+sll1.insert(0.5, 0);
+sll1.insert(5.5, sll1.length);
+console.log(sll1);
+
+sll1.remove(0);
+sll1.remove(2);
+sll1.remove(sll1.length - 1);
+console.log(sll1);
+
+sll1.reverse();
+console.log(sll1);
