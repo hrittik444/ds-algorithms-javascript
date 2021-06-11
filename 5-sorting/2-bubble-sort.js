@@ -2,7 +2,6 @@
 // Time complexity = O(n^2)
 // Space complexity = O(1)
 
-// Solution:
 function bubbleSort(arr) {
     let noSwaps;
     let swap = (arr, idx1, idx2) => [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];

@@ -1,6 +1,5 @@
 // Reverse a string, recursively.
 
-// Solution:
 function reverseStr(str, result) {
     if (str.length <= 0) return result;
 

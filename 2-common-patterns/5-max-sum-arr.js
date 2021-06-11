@@ -2,7 +2,6 @@
 // Write a function called maxSubarraySum which accepts an array of integers and a number called n. 
 // The function should calculate the maximum sum of n consecutive elements in the array.
 
-// Solution:
 function findMaxSum(arr, n) {
     if (arr.length < n) return null;
 

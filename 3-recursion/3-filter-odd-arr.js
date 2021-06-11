@@ -1,6 +1,6 @@
 // Filter odd values from an array, recursively.
 
-// Solution 1: helper method recusrion:
+// 1: helper method recusrion:
 function collectOddValues(arr) {
     let result = [];
 
@@ -20,7 +20,7 @@ function collectOddValues(arr) {
 
 console.log(collectOddValues([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
-// Solution 2: pure recursion:
+// 2: pure recursion:
 function collectOddValues(arr) {
     let newArr = [];
 

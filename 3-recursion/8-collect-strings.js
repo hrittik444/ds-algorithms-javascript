@@ -1,6 +1,5 @@
 // Write a function that accpts an object and returns an array of all values in the object that have typeof string.
 
-// Solution:
 function collectStrings(obj) {
     let res = [];
 

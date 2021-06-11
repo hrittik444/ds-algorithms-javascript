@@ -3,7 +3,6 @@
 // If the value is not found, return -1
 // This is an example of Binary Search.
 
-// Solution:
 function search(arr, val) {
     let left = 0;
     let right = arr.length - 1;

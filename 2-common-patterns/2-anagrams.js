@@ -1,7 +1,6 @@
 // The Frequency Counter Pattern:
 // Find if two strings are anagrams.
 
-// Solution:
 function anagrams(str1, str2) {
     let strObj1 = {};
     let strObj2 = {};

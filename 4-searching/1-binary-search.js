@@ -3,7 +3,6 @@
 // Uses The Divide and Conquer Pattern.
 // Time complexity: O(log n)
 
-// Solution:
 function binary(arr, val) {
     let left = 0;
     let right = arr.length - 1;

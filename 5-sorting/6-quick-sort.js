@@ -4,7 +4,6 @@
 // If array is already sorted, Quick Sort will take O(n^2)
 // So change start in pivot to midpoint of arr or some random element in arr, can affect complexity depending on the state of the array
 
-// Solution:
 function pivot(arr, start = 0, end = arr.length - 1) {
     let swap = (arr, idx1, idx2) => [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
 

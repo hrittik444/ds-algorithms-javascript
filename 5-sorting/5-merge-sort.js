@@ -2,7 +2,6 @@
 // Time complexity = O(n * log n) i.e. no. of splits = O(log n), no. of comparisons = O(n)
 // Space complexity = O(n)
 
-// Solution:
 function merge(arr1, arr2) {
     let i = 0, j = 0, result = [];
 

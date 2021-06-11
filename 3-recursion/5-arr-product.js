@@ -1,6 +1,5 @@
 // Find product of array elements, recursively.
 
-// Solution:
 function findProduct(arr) {
     let product = 1;
 

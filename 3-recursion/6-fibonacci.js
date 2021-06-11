@@ -1,6 +1,5 @@
 // Return nth fibonacci number, recursively.
 
-// Solution:
 function fib(n) {
     if (n <= 1) return n;
 
