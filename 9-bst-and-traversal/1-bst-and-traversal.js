@@ -13,7 +13,7 @@
 
 // Insertion: O(log n)
 // Searching: O(log n)
-// ...in most cases, not always
+// ...in most cases, not always, in worst case it will be O(n)
 
 // BFS vs. DFS:
 // Time Complexity of BFS and DFS are same
