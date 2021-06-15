@@ -1,0 +1,1 @@
+console.log('Just use an Object or Map');
