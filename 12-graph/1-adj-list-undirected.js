@@ -51,9 +51,9 @@ class Graph {
         delete this.adjacencyList[vertex];
     }
 
-    // recursiveDepthFirstTraversal: Recursive Depth First Traversal
+    // recursiveDepthFirstTraversal: Recursive Depth First Traversal of adjacency list, O(n)
     recursiveDepthFirstTraversal(start) {
-        let result = [], visited = {};
+        let visited = {}, result = [];
         let adjacencyList = this.adjacencyList;
 
         (function dfs(vertex) {
@@ -68,9 +68,9 @@ class Graph {
         return result;
     }
 
-    // iterativeDepthFirstTraversal: Iterative Depth First Traversal
+    // iterativeDepthFirstTraversal: Iterative Depth First Traversal of adjacency list, O(n^2)
     iterativeDepthFirstTraversal(start) {
-        let result = [], visited = {};
+        let visited = {}, result = [];
         let stack = [start];
         let vertex;
 
@@ -89,6 +89,56 @@ class Graph {
 
         return result;
     }
+
+    // recursiveBreadthFirstTraversal: Recursive Breadth First Traversal of adjacency list, O(n)
+    recursiveBreadthFirstTraversal(start) {
+        let visited = {}, result = [];
+        let queue = [start];
+        let vertex;
+        let adjacencyList = this.adjacencyList;
+
+        (function bfs() {
+            vertex = queue.shift();
+
+            if (vertex) {
+                if (visited[vertex] !== true) {
+                    visited[vertex] = true;
+                    result.push(vertex);
+                }
+
+                adjacencyList[vertex].forEach(neighbour => {
+                    if (!visited[neighbour]) queue.push(neighbour);
+                });
+
+                bfs();
+            }
+
+        })();
+
+        return result;
+    }
+
+    // iterativeBreadthFirstTraversal: Iterative Breadth First Traversal of adjacency list, O(n^2)
+    iterativeBreadthFirstTraversal(start) {
+        let visited = {}, result = [];
+        let queue = [start];
+        let vertex;
+
+        while (queue.length) {
+            vertex = queue.shift();
+
+            if (visited[vertex] !== true) {
+                visited[vertex] = true;
+                result.push(vertex);
+            }
+
+            this.adjacencyList[vertex].forEach(neighbour => {
+                if (!visited[neighbour]) queue.push(neighbour);
+            });
+        }
+
+        return result;
+    }
 }
 
 let g1 = new Graph();
@@ -102,13 +152,13 @@ g1.addVertex("E");
 g1.addVertex("F");
 console.log(g1);
 
-g1.addEdge("A", "B")
-g1.addEdge("A", "C")
-g1.addEdge("B", "D")
-g1.addEdge("C", "E")
-g1.addEdge("D", "E")
-g1.addEdge("D", "F")
-g1.addEdge("E", "F")
+g1.addEdge("A", "B");
+g1.addEdge("A", "C");
+g1.addEdge("B", "D");
+g1.addEdge("C", "E");
+g1.addEdge("D", "E");
+g1.addEdge("D", "F");
+g1.addEdge("E", "F");
 console.log(g1);
 
 g1.removeEdge("A", "C");
@@ -118,5 +168,7 @@ g1.removeVertex("B");
 console.log(g1);
 
 g1.recursiveDepthFirstTraversal("A");
-
 g1.iterativeDepthFirstTraversal("A");
+
+g1.recursiveBreadthFirstTraversal("A");
+g1.iterativeBreadthFirstTraversal("A");
