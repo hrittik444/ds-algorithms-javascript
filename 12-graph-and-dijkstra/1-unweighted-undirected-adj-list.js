@@ -18,7 +18,7 @@
 // Slower to iterate over all edges
 // Faster to lookup specific edge
 
-// Below is an implementation of an undirected graph using Adjacency List
+// Below is an implementation of an unweighted, undirected graph using Adjacency List
 
 class Graph {
     constructor() {
@@ -167,8 +167,8 @@ console.log(g1);
 g1.removeVertex("B");
 console.log(g1);
 
-g1.recursiveDepthFirstTraversal("A");
-g1.iterativeDepthFirstTraversal("A");
+console.log(g1.recursiveDepthFirstTraversal("A"));
+console.log(g1.iterativeDepthFirstTraversal("A"));
 
-g1.recursiveBreadthFirstTraversal("A");
-g1.iterativeBreadthFirstTraversal("A");
+console.log(g1.recursiveBreadthFirstTraversal("A"));
+console.log(g1.iterativeBreadthFirstTraversal("A"));
