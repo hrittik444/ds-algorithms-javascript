@@ -1,9 +1,8 @@
 // Return nth fibonacci number, recursively.
 
-function fib(n) {
-    if (n <= 1) return n;
-
-    return fib(n - 1) + fib(n - 2);
+function fib(num) {
+    if (num <= 2) return 1;
+    return fib(num - 1) + fib(num - 2);
 }
 
 console.log(fib(10));
