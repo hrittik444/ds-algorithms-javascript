@@ -1,15 +1,3 @@
-// Binary Heap:
-// Each node can have at most 2 children.
-// No ordering between siblings, unlike BST.
-// Max Binary Heap: Parent nodes are always larger than child nodes.
-// Min Binary Heap: Parent nodes are always smaller than child nodes.
-// In Binary Heaps, the left child is always added first.
-// Heaps are used to implement Priority Queues abd in Graph Traversal algorithms.
-
-// Storing Binary Heaps in an array:
-// For any index of an array n: left child is at index 2n + 1 and right child is at index 2n + 2 
-// For any index of an array n: parent is at index Math.floor((n - 1) / 2)
-
 class MaxBinaryHeap {
     constructor() {
         this.values = [];
@@ -21,7 +9,6 @@ class MaxBinaryHeap {
     }
 
     // insert: adding a new elment in the heap
-    // insert new node at the bottom of heap, bubble-up new node to correct place
     insert(val) {
         this.values.push(val);
 
@@ -30,7 +17,7 @@ class MaxBinaryHeap {
         while (currentIndex > 0) {
             let parentIndex = Math.floor((currentIndex - 1) / 2);
 
-            if (this.values[currentIndex] > this.values[parentIndex]) {
+            if (this.values[currentIndex] < this.values[parentIndex]) {
                 this.values = this.swap(this.values, currentIndex, parentIndex);
                 currentIndex = parentIndex;
             }
@@ -42,9 +29,6 @@ class MaxBinaryHeap {
     }
 
     // remove: removing the first element of the heap
-    // remove node from top of heap
-    // make the last node of heap, go to the top
-    // then sink-down the last node to correct place
     remove() {
         this.values = this.swap(this.values, 0, this.values.length - 1);
 
@@ -71,7 +55,7 @@ class MaxBinaryHeap {
 
             if (!this.values[leftChildIndex] && !this.values[rightChildIndex]) break;
 
-            if (this.values[largerChildIndex] > this.values[currentIndex]) {
+            if (this.values[largerChildIndex] < this.values[currentIndex]) {
                 this.values = this.swap(this.values, largerChildIndex, currentIndex);
                 currentIndex = largerChildIndex;
                 swap = true;
