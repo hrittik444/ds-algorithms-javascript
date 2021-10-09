@@ -21,6 +21,7 @@ class MaxBinaryHeap {
     }
 
     // insert: adding a new elment in the heap
+    // insert new node at the bottom of heap, bubble-up new node to correct place
     insert(val) {
         this.values.push(val);
 
@@ -40,6 +41,9 @@ class MaxBinaryHeap {
     }
 
     // remove: removing the first element of the heap
+    // remove node from top of heap
+    // make the last node of heap, go to the top
+    // then sink-down the last node to correct place
     remove() {
         this.values = this.swap(this.values, 0, this.values.length - 1);
 

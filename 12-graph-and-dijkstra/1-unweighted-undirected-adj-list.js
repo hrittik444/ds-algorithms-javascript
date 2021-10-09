@@ -112,7 +112,6 @@ class Graph {
 
                 bfs();
             }
-
         })();
 
         return result;
