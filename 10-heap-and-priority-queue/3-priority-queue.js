@@ -38,6 +38,7 @@ class PriorityQueue {
                 this.values = this.swap(this.values, currentIndex, parentIndex);
                 currentIndex = parentIndex;
             }
+
             else break;
         }
 
@@ -60,21 +61,24 @@ class PriorityQueue {
             if (this.values[leftChildIndex] && this.values[rightChildIndex]) {
                 smallerChildIndex = this.values[leftChildIndex].priority < this.values[rightChildIndex].priority ? leftChildIndex : rightChildIndex;
             }
+
             if (!this.values[leftChildIndex]) {
                 smallerChildIndex = rightChildIndex;
             }
+
             if (!this.values[rightChildIndex]) {
                 smallerChildIndex = leftChildIndex;
             }
-            if (!this.values[leftChildIndex] && !this.values[rightChildIndex]) break;
 
-            console.log(`${!this.values[leftChildIndex]}, ${!this.values[rightChildIndex]}, ${smallerChildIndex}`)
+            if (!this.values[leftChildIndex] && !this.values[rightChildIndex]) break;
 
             if (this.values[smallerChildIndex].priority < this.values[currentIndex].priority) {
                 this.values = this.swap(this.values, smallerChildIndex, currentIndex);
                 currentIndex = smallerChildIndex;
                 swap = true;
-            } else swap = false;
+            }
+
+            else swap = false;
 
             if (swap === false || currentIndex >= this.values.length) break;
         }
