@@ -20,6 +20,7 @@ class WeightedGraph {
         // distances: table of shortest distance of node from A
         // distancesPriorityQueue: priority queue containing the data of 'distances' represented as a priority queue, corresponding to the 'visited' array
         // so instead of adding to 'visited' array, we'll dequeue from distancesPriorityQueue
+        // previous: the object containing info about how we got to that node, i.e. which was the previous node
         let distancesPriorityQueue = new PriorityQueue();
         let distances = {};
         let previous = {};
@@ -50,8 +51,8 @@ class WeightedGraph {
                     shortestPath.push(currentNode);
                     currentNode = previous[currentNode];
                 }
-                break;
 
+                break;
             } else {
                 for (let neighbourIndex in this.adjacencyList[currentNode]) {
                     // find neighbour
@@ -102,6 +103,7 @@ class PriorityQueue {
                 this.values = this.swap(this.values, currentIndex, parentIndex);
                 currentIndex = parentIndex;
             }
+
             else break;
         }
 
@@ -123,21 +125,24 @@ class PriorityQueue {
             if (this.values[leftChildIndex] && this.values[rightChildIndex]) {
                 smallerChildIndex = this.values[leftChildIndex].priority < this.values[rightChildIndex].priority ? leftChildIndex : rightChildIndex;
             }
+
             if (!this.values[leftChildIndex]) {
                 smallerChildIndex = rightChildIndex;
             }
+
             if (!this.values[rightChildIndex]) {
                 smallerChildIndex = leftChildIndex;
             }
-            if (!this.values[leftChildIndex] && !this.values[rightChildIndex]) break;
 
-            console.log(`${!this.values[leftChildIndex]}, ${!this.values[rightChildIndex]}, ${smallerChildIndex}`)
+            if (!this.values[leftChildIndex] && !this.values[rightChildIndex]) break;
 
             if (this.values[smallerChildIndex].priority < this.values[currentIndex].priority) {
                 this.values = this.swap(this.values, smallerChildIndex, currentIndex);
                 currentIndex = smallerChildIndex;
                 swap = true;
-            } else swap = false;
+            }
+
+            else swap = false;
 
             if (swap === false || currentIndex >= this.values.length) break;
         }
